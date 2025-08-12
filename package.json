@@ -1,0 +1,19 @@
+{
+  "name": "svg-medication-labels",
+  "version": "0.0.1-dev",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Marvin Gutstein",
+  "license": "GPL-3.0-or-later",
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.4"
+  }
+}
