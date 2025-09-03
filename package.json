@@ -1,6 +1,6 @@
 {
   "name": "svg-medication-labels",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spritzenetiketten für Medikamente, nach DIVI Empfehlung, als SVG.",
   "main": "dist/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "@types/text-to-svg": "^3.1.4",
     "lodash": "^4.17.21",
     "svgdom": "^0.1.22",
+    "svgo": "^4.0.0",
     "text-to-svg": "^3.1.5"
   }
 }
