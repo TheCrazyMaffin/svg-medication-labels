@@ -41,6 +41,12 @@ Falls Ungereimtheiten auffallen oder sonstige Vorschläge aufkommen, diese bitte
 - [ ] Anpassungen für **"Print-on demand"-Drucker**
 
 ## Nutzung
+Das Programm kann mit einem Package-Manager wie pnpm genutzt werden.
+```bash
+pnpm add https://github.com/TheCrazyMaffin/svg-medication-labels
+```
+
+
 Die wichtigsten Komponente ist `medications` als Liste aller Wirkstoffe und die Objekt-Eigenschaft `variations` jedes Wirkstoffs. Die `variations`-Eigenschaft enthält alle Label-Vorlagen für den Wirkstoff.
 
 Somit wäre zur Nutzung folgendes beispielhaftes Vorgehen denkbar:
@@ -71,6 +77,11 @@ render(
     // Der Index im .variations Array für die zu nutzende Variation
     variationIndex 
 )
+```
+
+## Kompilieren
+```bash
+pnpm run build
 ```
 
 [^1]: [DIVI Empfehlung](https://www.divi.de/service/spritzenetiketten)
