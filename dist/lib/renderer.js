@@ -7,6 +7,7 @@ const helpers_1 = require("./helpers");
 const _ = require("lodash");
 const TextToSVG = require("text-to-svg");
 const path = require("path");
+const svgo_1 = require("svgo");
 class Renderer {
     constructor(options) {
         this.markupRegex = /(<(?<tag>.*?)((>(?<text>.*?)<\/>)|\/>))|(?<text>.*?)(?=<|$)/g;
@@ -39,7 +40,7 @@ class Renderer {
             .move(0, 0)
             .radius(this.edgeRadius);
         this.label.clipWith(clip);
-        return this.canvas.svg();
+        return (0, svgo_1.optimize)(this.canvas.svg()).data;
     }
     text(text, defaultColor) {
         const textGroup = this.label.group().fill(defaultColor);

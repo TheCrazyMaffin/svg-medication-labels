@@ -5,6 +5,7 @@ import * as _ from 'lodash'
 import * as TextToSVG from 'text-to-svg'
 import { Hex, Options, Style } from '../types/label'
 import * as path from 'path'
+import { optimize } from 'svgo'
 
 export class Renderer {
   markupRegex = /(<(?<tag>.*?)((>(?<text>.*?)<\/>)|\/>))|(?<text>.*?)(?=<|$)/g
@@ -47,8 +48,8 @@ export class Renderer {
       .move(0, 0)
       .radius(this.edgeRadius)
     this.label.clipWith(clip)
-
-    return this.canvas.svg()
+    
+    return optimize(this.canvas.svg()).data
   }
 
   text (text: string, defaultColor: Hex) {
