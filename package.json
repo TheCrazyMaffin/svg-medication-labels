@@ -1,19 +1,33 @@
 {
   "name": "svg-medication-labels",
-  "version": "0.0.1-dev",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Spritzenetiketten für Medikamente, nach DIVI Empfehlung, als SVG.",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "rimraf dist/ && copyfiles -u 1 src/fonts/* dist/ && tsc --build"
   },
   "keywords": [],
   "author": "Marvin Gutstein",
   "license": "GPL-3.0-or-later",
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "@eslint/js": "^9.34.0",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^24.3.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^9.34.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.2.4"
+    "@svgdotjs/svg.js": "^3.2.4",
+    "@svgdotjs/svg.topath.js": "^2.0.3",
+    "@types/svgdom": "^0.1.2",
+    "@types/text-to-svg": "^3.1.4",
+    "lodash": "^4.17.21",
+    "svgdom": "^0.1.22",
+    "text-to-svg": "^3.1.5"
   }
 }

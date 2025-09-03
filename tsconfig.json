@@ -1,12 +1,18 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es2020",
         "module": "commonjs",
-        "outDir": "./out",
+        "outDir": "./dist",
         "rootDir": "./src",
-        "strict": true
+        "baseUrl": "./",
+        "strict": true,
+        "declaration": true
     },
+    "include": [
+        "src/**/*.tsx",
+        "src/**/*.ts"
+    ],
     "exclude": [
-        "node_modules"
+        "node_modules",
     ]
 }
